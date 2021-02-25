@@ -85,7 +85,7 @@
 				<version>2.2.0</version>
 				<configuration>
 					<version>1</version>
-					<projectId>GCLOUD_CONFIG</projectId>
+					<projectId>kinetic-horizon-305009</projectId>
 				</configuration>
 			</plugin>
 			<plugin>
