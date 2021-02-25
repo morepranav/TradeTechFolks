@@ -17,7 +17,6 @@ public class AccountService {
     private ModelMapper modelMapper;
 
     public AccountEntity updateAccount(AccountOpenRequest request){
-        // convert DTO to entity
         AccountEntity entity = modelMapper.map(request, AccountEntity.class);
         return repo.save(entity);
 
