@@ -24,7 +24,9 @@ public class AccountController {
 
     @PostMapping(path = "/accountOpen")
     public ResponseEntity<AccountOpenResponse> createAccount(@RequestBody AccountOpenRequest request) {
+        System.out.println("Before calling Update Account--start");
         AccountEntity entity =  service.updateAccount(request);
+        System.out.println("Before calling Update Account--end");
 // convert entity to DTO
         AccountOpenResponse response = modelMapper.map(entity, AccountOpenResponse.class);
         return new ResponseEntity<AccountOpenResponse>(response, HttpStatus.CREATED);

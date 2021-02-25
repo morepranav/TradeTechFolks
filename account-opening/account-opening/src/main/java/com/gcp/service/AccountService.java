@@ -17,8 +17,16 @@ public class AccountService {
     private ModelMapper modelMapper;
 
     public AccountEntity updateAccount(AccountOpenRequest request){
+        AccountEntity acctEntity = null;
+        System.out.println("updateAccount--start");
         AccountEntity entity = modelMapper.map(request, AccountEntity.class);
-        return repo.save(entity);
+        System.out.println("updateAccount--end" + entity.toString());
+        try{
+            acctEntity = repo.save(entity);
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        return acctEntity;
 
     }
 
